@@ -21,4 +21,30 @@ public class ArbolBinario {
         return  new Nodo(ramaIzq,dato,ramaDcha);
     }
 
+    public static void preOrden(Nodo r){
+        if(r != null){
+            visitar(r.getDato());
+            preOrden(r.getIzquierdo());
+            preOrden(r.getDerecho());
+        }
+    }
+
+    public static void inOrden(Nodo r){
+        if(r != null){
+
+            preOrden(r.getIzquierdo());
+            visitar(r.getDato());
+            preOrden(r.getDerecho());
+        }
+    }
+    public static void postOrden(Nodo r){
+        if(r != null){
+            preOrden(r.getIzquierdo());
+            preOrden(r.getDerecho());
+            visitar(r.getDato());
+        }
+    }
+    public static void visitar(Object dato){
+        System.out.print(dato+", ");
+    }
 }

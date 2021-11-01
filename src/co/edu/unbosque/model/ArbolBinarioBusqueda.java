@@ -27,12 +27,13 @@ public class ArbolBinarioBusqueda extends  ArbolBinario{
         }
     }
 
-    public Nodo insertar(Object valor )throws Exception{
+    public void insertar(Object valor )throws Exception{
         Comparador  dato;
         dato = (Comparador) valor;
         raiz = insertar(raiz, dato);
-        return raiz;
+
     }
+
     protected Nodo insertar(Nodo raizSub, Comparador dato)throws Exception{
         if(raizSub==null){
             raizSub = new Nodo(dato);
