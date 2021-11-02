@@ -20,7 +20,7 @@ public class Controller {
     }
     
     public void start() {
-
+/*
         a1 = ArbolBinario.nuevoArbol(null, 1, null);
         a2 = ArbolBinario.nuevoArbol(null,4 , null);
         a = ArbolBinario.nuevoArbol(a1, 5, a2);
@@ -33,16 +33,24 @@ public class Controller {
         System.out.println("");
         System.out.println("pre orden");
         ArbolBinario.preOrden(a);
+*/
 
 
+            try {
+                //a2 = ArbolBinario.nuevoArbol(null,4 , null);
+                //abb.buscar(a2);
+                abb.insertar(10);
+                abb.insertar(24);
+                abb.insertar(23);
+                abb.insertar(5);
+                abb.insertar(6);
+                abb.insertar(12);
+                abb.buscar(5);
 
-        try {
-           // abb.buscar(22);
-          //abb.insertar("adsf");
+            }catch (Exception e) {
+                    e.printStackTrace();
+            }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
     }
     

@@ -9,7 +9,7 @@ public class Nodo {
 
     }
 
-    public Nodo(Nodo izquierdo,Object dato, Nodo derecho) {
+    public Nodo(Nodo izquierdo,Object dato, Nodo derecho)  {
         this.dato = dato;
         this.izquierdo = izquierdo;
         this.derecho = derecho;
