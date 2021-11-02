@@ -34,11 +34,7 @@ public class Controller {
         System.out.println("pre orden");
         ArbolBinario.preOrden(a);
 */
-
-
             try {
-                //a2 = ArbolBinario.nuevoArbol(null,4 , null);
-                //abb.buscar(a2);
                 abb.insertar(10);
                 abb.insertar(24);
                 abb.insertar(23);
@@ -46,6 +42,14 @@ public class Controller {
                 abb.insertar(6);
                 abb.insertar(12);
                 abb.buscar(5);
+                System.out.println("postorden");
+                ArbolBinario.postOrden(abb.raizArbol());
+                System.out.println("");
+                System.out.println("preorden");
+                ArbolBinario.preOrden(abb.raizArbol());
+                System.out.println("");
+                System.out.println("inorden");
+                ArbolBinario.inOrden(abb.raizArbol());
 
             }catch (Exception e) {
                     e.printStackTrace();
