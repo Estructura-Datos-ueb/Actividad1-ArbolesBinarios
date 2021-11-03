@@ -1,5 +1,7 @@
 package co.edu.unbosque.model;
 
+import org.w3c.dom.Node;
+
 public class ArbolBinarioBusqueda extends  ArbolBinario implements Comparador{
     public Comparador comparador;
     public ArbolBinarioBusqueda() {
@@ -27,9 +29,10 @@ public class ArbolBinarioBusqueda extends  ArbolBinario implements Comparador{
         }
     }
 
-    public void insertar(Object valor )throws Exception{
+    public Nodo insertar(Object valor )throws Exception{
         Object elmInsert= valor;
         raiz = insertar(raiz, elmInsert);
+        return raiz;
     }
 
     protected Nodo insertar(Nodo raizSub, Object elmInsert)throws Exception{
@@ -118,4 +121,66 @@ public class ArbolBinarioBusqueda extends  ArbolBinario implements Comparador{
     public boolean mayorIgualQue(Object q) {
         return false;
     }
+
+    public void eliminar (Object valor) throws Exception {
+        Object dato;
+        dato = valor;
+        raiz = eliminar(raiz, dato);
+
+    }
+
+    public Nodo eliminar (Nodo raizSub, Object dato) throws Exception
+    {
+        if (raizSub == null)
+            throw new Exception ("No encontrado el nodo con la clave");
+        else if (menorQue(raizSub.getDato(),  dato))
+        {
+            Nodo iz;
+            iz = eliminar(raizSub.getIzquierdo(), dato);
+            raizSub.setDerecho(iz);
+        }
+        else if (mayorQue(raizSub.getDato(), dato))
+        {
+            Nodo dr;
+            dr = eliminar(raizSub.getDerecho(), dato);
+            raizSub.setDerecho(dr);
+        }
+        else // Nodo encontrado
+        {
+            Nodo q;
+            q = raizSub; // nodo a quitar del árbol
+            if (q.getIzquierdo() == null)
+                raizSub = q.getDerecho();
+            else if (q.getDerecho() == null)
+                raizSub = q.getIzquierdo();
+            else
+            { // tiene rama izquierda y derecha
+                q = reemplazar(q);
+            }
+            q = null;
+        }
+        return raizSub;
+    }
+    // método interno para susutituir por el mayor de los menores
+    private Nodo reemplazar(Nodo act)
+    {
+        Nodo a, p;
+        p = act;
+        a = act.getIzquierdo(); // rama de nodos menores
+        while (a.getDerecho() != null)
+        {
+            p = a;
+            a = a.getDerecho();
+        }
+        act.setDato(a.getDato());
+        if (p == act)
+            p.setDerecho(a.getIzquierdo());
+        else
+            p.setIzquierdo(a.getIzquierdo());
+        return a;
+    }
+
+
+
+
 }

@@ -39,13 +39,16 @@ public class Controller {
             try {
                 //a2 = ArbolBinario.nuevoArbol(null,4 , null);
                 //abb.buscar(a2);
-                abb.insertar(10);
-                abb.insertar(24);
-                abb.insertar(23);
-                abb.insertar(5);
-                abb.insertar(6);
-                abb.insertar(12);
+                System.out.println("" + abb.insertar(10));
+                System.out.println("" + abb.insertar(24));
+                System.out.println("" + abb.insertar(23));
+                System.out.println("" + abb.insertar(5));
+                System.out.println("" + abb.insertar(6));
+                String r =  "" +abb.insertar(12);
+                System.out.println("" + r);
                 abb.buscar(5);
+                abb.eliminar(12);
+                System.out.println(abb.getRaiz());
 
             }catch (Exception e) {
                     e.printStackTrace();

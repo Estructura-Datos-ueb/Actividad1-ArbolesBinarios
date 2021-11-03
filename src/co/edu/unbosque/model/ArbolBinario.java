@@ -47,4 +47,8 @@ public class ArbolBinario {
     public static void visitar(Object dato){
         System.out.print(dato+", ");
     }
+
+    public Nodo getRaiz() {
+        return raiz;
+    }
 }
