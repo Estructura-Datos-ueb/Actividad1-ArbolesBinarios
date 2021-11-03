@@ -47,15 +47,9 @@ public class Controller {
                 System.out.println("" + r);
                 abb.buscar(5);
                 abb.eliminar(12);
-                System.out.println(abb.getRaiz());
+                System.out.println(abb.buscar(12));
 
-                abb.insertar(10);
-                abb.insertar(24);
-                abb.insertar(23);
-                abb.insertar(5);
-                abb.insertar(6);
-                abb.insertar(12);
-                abb.buscar(5);
+                /*
                 System.out.println("postorden");
                 ArbolBinario.postOrden(abb.raizArbol());
                 System.out.println("");
@@ -63,7 +57,7 @@ public class Controller {
                 ArbolBinario.preOrden(abb.raizArbol());
                 System.out.println("");
                 System.out.println("inorden");
-                ArbolBinario.inOrden(abb.raizArbol());
+                ArbolBinario.inOrden(abb.raizArbol());*/
 
 
             }catch (Exception e) {
