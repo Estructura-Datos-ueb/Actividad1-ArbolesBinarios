@@ -23,36 +23,9 @@ public class Controller {
     }
     
     public void start() {
-/*
-        a1 = ArbolBinario.nuevoArbol(null, 1, null);
-        a2 = ArbolBinario.nuevoArbol(null,4 , null);
-        a = ArbolBinario.nuevoArbol(a1, 5, a2);
-        pila.insertar(a);
-        System.out.println("in orden");
-        ArbolBinario.inOrden(a);
-        System.out.println("");
-        System.out.println("post orden");
-        ArbolBinario.postOrden(a);
-        System.out.println("");
-        System.out.println("pre orden");
-        ArbolBinario.preOrden(a);
-*/
+
             try {
-
-                //a2 = ArbolBinario.nuevoArbol(null,4 , null);
-                //abb.buscar(a2);
-                 abb.insertar(10);
-                 abb.insertar(24);
-                 abb.insertar(23);
-                 abb.insertar(5);
-                 abb.insertar(6);
-                String r =  "" +abb.insertar(12);
-                System.out.println("" + r);
-                System.out.println(abb.buscar(234));
-                abb.eliminar(24);
-                System.out.println(abb.getRaiz());
-
-                v.mostrarInformacion("binvenidos");
+                v.mostrarInformacion("Binvenidos a Arboles Binarios");
                 String[] opciones = {"Agregar elemento", "Eliminar elemento", "Buscar elemento",
                         "Recorrer preorden", "Recorrer inorden", "Recorrer postorden" , "Mostrar arbol abb por consola"};
                 String metodo = v.mostrarLista("Seleccione una opcion", opciones);
@@ -87,7 +60,8 @@ public class Controller {
                         v.mostrarInformacion(arbol.getOrden());
                         break;
                     case "Mostrar arbol abb por consola":
-
+                        abb.print2D(abb.getRaiz());
+                        System.out.println(abb.getRaiz());
                         break;
                 }
 
