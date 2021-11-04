@@ -53,16 +53,19 @@ public class Controller {
                     case "Recorrer preorden":
                         ArbolBinario.preOrden(abb.getRaiz());
                         v.mostrarInformacion(arbol.getOrden());
+                        arbol.setOrden(null);
                         start();
                         break;
                     case "Recorrer inorden":
                         ArbolBinario.inOrden(abb.getRaiz());
                         v.mostrarInformacion(arbol.getOrden());
+                        arbol.setOrden(null);
                         start();
                         break;
                     case "Recorrer postorden":
                         ArbolBinario.postOrden(abb.getRaiz());
                         v.mostrarInformacion(arbol.getOrden());
+                        arbol.setOrden(null);
                         start();
                         break;
                     case "Mostrar arbol abb por consola":
