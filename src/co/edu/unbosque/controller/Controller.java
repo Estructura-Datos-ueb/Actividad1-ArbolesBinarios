@@ -34,10 +34,12 @@ public class Controller {
                     case "Agregar elemento":
                         int numAdd =Integer.parseInt(v.leerDato("Ingrese el dato que desea agregar en el arbol abb"));
                         abb.insertar(numAdd);
+                        start();
                         break;
                     case "Eliminar elemento":
                         int numDel =Integer.parseInt(v.leerDato("Ingrese el dato que desea eliminar en el arbol abb"));
                         abb.eliminar(numDel);
+                        start();
                         break;
                     case "Buscar elemento":
                         int numBusc =Integer.parseInt(v.leerDato("Ingrese el dato que desea buscar en el arbol abb"));
@@ -46,22 +48,27 @@ public class Controller {
                         }else{
                             v.mostrarInformacion("El numero ingresado  se encuentra en el arbol abb");
                         }
+                        start();
                         break;
                     case "Recorrer preorden":
                         ArbolBinario.preOrden(abb.getRaiz());
                         v.mostrarInformacion(arbol.getOrden());
+                        start();
                         break;
                     case "Recorrer inorden":
                         ArbolBinario.inOrden(abb.getRaiz());
                         v.mostrarInformacion(arbol.getOrden());
+                        start();
                         break;
                     case "Recorrer postorden":
                         ArbolBinario.postOrden(abb.getRaiz());
                         v.mostrarInformacion(arbol.getOrden());
+                        start();
                         break;
                     case "Mostrar arbol abb por consola":
                         abb.print2D(abb.getRaiz());
                         System.out.println(abb.getRaiz());
+                        start();
                         break;
                 }
 
