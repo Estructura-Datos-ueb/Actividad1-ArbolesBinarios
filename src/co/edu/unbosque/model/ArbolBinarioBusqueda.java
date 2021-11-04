@@ -126,7 +126,6 @@ public class ArbolBinarioBusqueda extends  ArbolBinario implements Comparador{
         Object dato;
         dato = valor;
         raiz = eliminar(raiz, dato);
-
     }
 
     public Nodo eliminar (Nodo raizSub, Object dato) throws Exception
@@ -137,16 +136,12 @@ public class ArbolBinarioBusqueda extends  ArbolBinario implements Comparador{
         {
             Nodo iz;
             iz = eliminar(raizSub.getIzquierdo(), dato);
-            raizSub.setDerecho(iz);
-        }
-        else if (mayorQue(raizSub.getDato(), dato))
-        {
+            raizSub.setIzquierdo(iz);
+        }else if (mayorQue(raizSub.getDato(), dato)) {
             Nodo dr;
             dr = eliminar(raizSub.getDerecho(), dato);
             raizSub.setDerecho(dr);
-        }
-        else // Nodo encontrado
-        {
+        }else{
             Nodo q;
             q = raizSub; // nodo a quitar del árbol
             if (q.getIzquierdo() == null)

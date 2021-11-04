@@ -1,6 +1,7 @@
 package co.edu.unbosque.model;
 
 public class ArbolBinario {
+    private static String orden;
     protected Nodo raiz;
 
     public ArbolBinario() {
@@ -45,7 +46,21 @@ public class ArbolBinario {
         }
     }
     public static void visitar(Object dato){
-        System.out.print(dato+", ");
+        String p=orden+"";
+        if(!p.equalsIgnoreCase("null")){
+            orden= orden+""+dato+" , ";
+        }else{
+            orden= dato+" , ";
+        }
+
+    }
+
+    public static String getOrden() {
+        return orden;
+    }
+
+    public static void setOrden(String orden) {
+        ArbolBinario.orden = orden;
     }
 
     public Nodo getRaiz() {
