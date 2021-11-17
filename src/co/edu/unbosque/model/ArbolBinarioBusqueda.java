@@ -169,9 +169,9 @@ public class ArbolBinarioBusqueda extends  ArbolBinario implements Comparador{
         }
         act.setDato(a.getDato());
         if (p == act)
-            p.setDerecho(a.getIzquierdo());
-        else
             p.setIzquierdo(a.getIzquierdo());
+        else
+            p.setDerecho(a.getIzquierdo());
         return a;
     }
 

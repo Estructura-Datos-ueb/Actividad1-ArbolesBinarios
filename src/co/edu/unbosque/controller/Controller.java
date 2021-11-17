@@ -19,13 +19,15 @@ public class Controller {
 
     public Controller (){
         	v = new ViewConsole();
+        v.mostrarInformacion("Binvenidos a Arboles Binarios");
+
         	start();
     }
     
     public void start() {
 
             try {
-                v.mostrarInformacion("Binvenidos a Arboles Binarios");
+
                 String[] opciones = {"Agregar elemento", "Eliminar elemento", "Buscar elemento",
                         "Recorrer preorden", "Recorrer inorden", "Recorrer postorden" , "Mostrar arbol abb por consola"};
                 String metodo = v.mostrarLista("Seleccione una opcion", opciones);
